@@ -38,6 +38,12 @@ npm run server
 
 Backend base URL: `http://localhost:5000`
 
+### Frontend ↔ Backend connection
+
+- Frontend API calls use relative `/api/...` paths by default.
+- Vite dev server proxies `/api` and `/uploads` to `http://localhost:5000` (see `vite.config.js`).
+- Optional: set `VITE_API_BASE_URL` to point to a deployed backend URL.
+
 ## REST API routes
 
 ### Auth
