@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function Home() {
   return (
@@ -17,7 +18,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminLogin />} />
-      </Routes>
+        <Route
+          path="/admin-dashboard"
+          element={<AdminDashboard />}
+        />
+            </Routes>
     </BrowserRouter>
   );
 }
