@@ -1,16 +1,9 @@
-import React, { useState } from "react";
-
-export default function AdminLogin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (email === "admin@gmail.com" && password === "123456") {
-      alert("Admin Login Successful");
-    } else {
-      alert("Invalid Email or Password");
+if (email === "admin@gmail.com" && password === "123456") {
+  alert("Admin Login Successful");
+  window.location.href = "/admin-dashboard";
+} else {
+  alert("Invalid Email or Password");
+}
     }
   };
 
