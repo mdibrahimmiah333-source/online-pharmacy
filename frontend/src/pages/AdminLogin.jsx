@@ -1,9 +1,17 @@
-if (email === "admin@gmail.com" && password === "123456") {
-  alert("Admin Login Successful");
-  window.location.href = "/admin-dashboard";
-} else {
-  alert("Invalid Email or Password");
-}
+import React, { useState } from "react";
+
+export default function AdminLogin() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (email === "admin@gmail.com" && password === "123456") {
+      alert("Admin Login Successful");
+      window.location.href = "/admin-dashboard";
+    } else {
+      alert("Invalid Email or Password");
     }
   };
 
@@ -27,7 +35,12 @@ if (email === "admin@gmail.com" && password === "123456") {
           boxShadow: "0 0 10px rgba(0,0,0,0.1)",
         }}
       >
-        <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "20px",
+          }}
+        >
           Admin Login
         </h2>
 
@@ -51,7 +64,7 @@ if (email === "admin@gmail.com" && password === "123456") {
           style={{
             width: "100%",
             padding: "10px",
-            marginBottom: "15px",
+            marginBottom: "20px",
           }}
         />
 
@@ -64,6 +77,7 @@ if (email === "admin@gmail.com" && password === "123456") {
             color: "white",
             border: "none",
             borderRadius: "5px",
+            cursor: "pointer",
           }}
         >
           Login
